@@ -16,7 +16,7 @@ export const MainNavBar = ({ title }) => {
                 className='border-0' aria-controls='navbar-toggle' />
             <NavBar.Collapse id='navbar-toggle'>
                 <Nav className='ml-auto'>
-                    <Link className='nav-link' to='/'>Home</Link>
+                    <Link className='nav-link' to='react_portfolio/'>Home</Link>
                     <Link className='nav-link' to='/about'>About</Link>
                     <Link className='nav-link' to='/contact'>Contact</Link>
                 </Nav>
