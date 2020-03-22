@@ -37,7 +37,7 @@ class App extends Component {
         <Container className='p-0' fluid={true}>
           <MainNavBar title={title} />
           <Route
-            path='react_portfolio/'
+            path='/react_portfolio'
             exact
             render={() => <HomePage homeProps={home} />}
             subtitle={home.subtitle}
