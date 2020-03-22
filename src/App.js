@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from 'react-bootstrap'
 import './App.css';
-// import { Footer } from './components/Footer.component';
 import { HomePage } from './pages/HomePage.page';
 import { AboutPage } from './pages/AboutPage.page';
 import { ContactPage } from './pages/ContactPage.page';
@@ -52,7 +51,6 @@ class App extends Component {
             path='/contact'
             render={() => <ContactPage title={contact.title} />}
           />
-          {/* <Footer /> */}
         </Container>
       </Router>
     );

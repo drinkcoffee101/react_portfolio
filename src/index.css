@@ -83,6 +83,16 @@ p {
   color: rgba(74, 74, 74, 0.3)
 }
 
+.resume-link {
+  color: '#00A6ED';
+  transition: color 0.5s ease;
+}
+
+.resume-link:hover {
+  color: rgba(0, 166, 237, 0.3);
+  transition: color 0.5s ease;
+}
+
 .link-container {
   padding-top: 5rem;
 }

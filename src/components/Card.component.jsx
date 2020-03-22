@@ -18,12 +18,6 @@ export const Card = ({ item }) => {
                         link={item.link} />
                 </MDBMask>
             </MDBView>
-
-            {/* {item.selected &&
-                <CardInfo
-                    title={item.title}
-                    subTtile={item.subTtile}
-                    link={item.link} />} */}
         </div>
     )
 }
