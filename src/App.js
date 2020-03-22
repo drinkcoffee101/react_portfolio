@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, HashRouter } from "react-router-dom";
 import { Container } from 'react-bootstrap'
 import './App.css';
 import { HomePage } from './pages/HomePage.page';
@@ -31,13 +31,13 @@ class App extends Component {
 
   render() {
     const { home, about, contact, title } = this.state
-    
+
     return (
-      <Router>
+      <HashRouter basename='/'>
         <Container className='p-0' fluid={true}>
           <MainNavBar title={title} />
           <Route
-            path='/react_portfolio'
+            path='/'
             exact
             render={() => <HomePage homeProps={home} />}
             subtitle={home.subtitle}
@@ -52,7 +52,7 @@ class App extends Component {
             render={() => <ContactPage title={contact.title} />}
           />
         </Container>
-      </Router>
+      </HashRouter>
     );
   }
 }
