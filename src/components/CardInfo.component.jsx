@@ -1,9 +1,10 @@
 import React from 'react'
 import { useSpring, animated } from "react-spring";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
+import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { Container, Row, Col } from 'react-bootstrap';
 
-export const CardInfo = ({ title, subTitle, link }) => {
+export const CardInfo = ({ title, subTitle, gitHubLink, videoLink }) => {
 
     const style = useSpring({ opacity: 1, from: { opacity: 0 } })
 
@@ -11,11 +12,26 @@ export const CardInfo = ({ title, subTitle, link }) => {
         <animated.div className='g-card-info' stlye={style}>
             <p className='g-card-title'>{title}</p>
             <p className='g-card-sub-title'>{subTitle}</p>
-            <a href={link}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='card-link'
-            ><FontAwesomeIcon icon={faExternalLinkSquareAlt} size='2x' /></a>
+            <Container style={{ paddingTop: '1rem' }}>
+                <Row>
+                    <Col className='text-center'>
+                        <a
+                            href={gitHubLink}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='card-link'
+                        ><FontAwesomeIcon icon={faGithub} size='2x' /></a>
+                    </Col>
+                    {videoLink ?
+                        <Col className='text-center'>
+                            <a
+                                href={videoLink}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className='card-link'
+                            ><FontAwesomeIcon icon={faYoutube} size='2x' /></a></Col> : ''}
+                </Row>
+            </Container>
         </animated.div>
     )
 }

@@ -32,17 +32,21 @@ p {
 .g-card-info {
   margin-top: 10px;
   min-height: 250px;
+  max-width: 250px;
 }
 
 .g-card-title {
   font-size: 30px;
   margin: 0px;
-  color: white
+  color: white;
+  text-align: center;
 }
 
 .g-card-sub-title {
   font-size: 16px;
   margin: 0px;
+  color: white;
+  text-align: center;
 }
 
 .card-link {

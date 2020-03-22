@@ -14,8 +14,10 @@ export const Card = ({ item }) => {
                 <MDBMask className="flex-center" overlay="black-strong" style={{ borderRadius: '10px' }}>
                     <CardInfo
                         title={item.title}
-                        subTtile={item.subTtile}
-                        link={item.link} />
+                        subTitle={item.subTitle}
+                        gitHubLink={item.gitHubLink}
+                        videoLink={item.videoLink}
+                    />
                 </MDBMask>
             </MDBView>
         </div>

@@ -12,9 +12,10 @@ export default class MainCarousel extends Component {
             {
                 id: 0,
                 title: 'Kindler',
-                subTitle: 'Date planning phone react native app',
+                subTitle: 'Date planning React Native app',
                 imgSrc: fire,
-                link: 'https://github.com/satchelsmidt/Date_Planner',
+                gitHubLink: 'https://github.com/satchelsmidt/Date_Planner',
+                videoLink: 'https://www.youtube.com/watch?v=9QN2OPpL3Kc&feature=emb_title',
                 selected: false
             },
             {
@@ -22,15 +23,17 @@ export default class MainCarousel extends Component {
                 title: 'Deron Coffie',
                 subTitle: 'Github',
                 imgSrc: arcade,
-                link: 'https://github.com/drinkcoffee101',
+                gitHubLink: 'https://github.com/drinkcoffee101',
+                videoLink: '',
                 selected: false
             },
             {
                 id: 2,
                 title: 'SparkCourse',
-                subTitle: 'Date planning phone react native app',
+                subTitle: 'Electronic music focused course builder using free resoucres found on the web',
                 imgSrc: spark,
-                link: 'https://github.com/drinkcoffee101/SparkCourse',
+                gitHubLink: 'https://github.com/drinkcoffee101/SparkCourse',
+                videoLink: 'https://www.youtube.com/watch?v=DciZfwRgUnc&feature=emb_title',
                 selected: false
             },
         ]

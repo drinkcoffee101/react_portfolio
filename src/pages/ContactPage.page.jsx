@@ -4,6 +4,8 @@ import { Row, Col, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
+import DeronCoffieResume from '../assets/images/DeronCoffieResume.pdf'
+
 
 const contactItems = [
     {
@@ -22,11 +24,13 @@ const contactItems = [
         icon: faGoogle,
     },
     {
-        href: 'public/DeronCoffieResume.pdf',
+        href: DeronCoffieResume,
         linkStyle: 'resume-link',
         icon: faFileDownload,
+        message: '(Resume)'
     }
 ]
+
 
 export const ContactPage = ({ title }) => {
     return (
@@ -36,15 +40,26 @@ export const ContactPage = ({ title }) => {
                 <Row className='justify-content-center'>
                     {Children.toArray(contactItems.map(item =>
                         <Col className='text-center'>
-                            <a
-                                href={item.href}
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                className={item.linkStyle}
-                                download
-                            >
-                                <FontAwesomeIcon icon={item.icon} size='6x' />
-                            </a>
+                            <Container>
+                                <Row>
+                                    <Col>
+                                        <a
+                                            href={item.href}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className={item.linkStyle}
+                                            download
+                                        >
+                                            <FontAwesomeIcon icon={item.icon} size='6x' />
+                                        </a>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        {item.message ? <span>{item.message}</span> : ''}
+                                    </Col>
+                                </Row>
+                            </Container>
                         </Col>
                     ))}
                 </Row>
